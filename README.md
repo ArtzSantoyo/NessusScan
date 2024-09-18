@@ -17,13 +17,10 @@ I go to Nessus/new scan/ basic network scan to create a scan templates as shown 
 ![4](https://github.com/user-attachments/assets/021c926d-ba45-48f2-9993-0e9c6ce48a06)
 
 
-Credentials Scan: for a more thorough scan I need to give Nessus credentials for the Machines that will undergo a scan, but they will have to be properly set up to allow Nessus's deeper scan
-Im going to proceed with some of Tenable recommendations for credential checks on Windows (documentation here https://docs.tenable.com/nessus/Content/CredentialedChecksOnWindows.htm#Configure-a-Local-Account)
+Finally after the scan is completed, its possible to generate a report
 
-To configure windows properly its necessary to disable UAC (User Account Control), open the Control Panel, select User Accounts, and set Turn User Account Control to Off.
+![report](https://github.com/user-attachments/assets/50f55d6a-ccbc-4312-83f3-b6905aed0b61)
 
-First I go to Services and allow Remote Registry
+And select to prefered template to receive the report info, according to the user or company needs
 
-Second I select Windows tab/Registry editor to add a key that will further allow the remote scan, from Reg edit the whole direction is as shown in image, and then I Add a new DWORD (32 bits) "LocalAccountTokenFilePolicy", enter inside the new DWORD an Set its value to 1
-
-Now it is time for the new scan with credentials, but to add those credentials to Nessus first go to my scans and select the Machine to add the credentials, then settings/credentials/windows and select the authentication method, username and password (Tip: for be sure about the username I open a CMD window and input the command "whoami" and that will print the current username)
+![report 1](https://github.com/user-attachments/assets/e31c03aa-ef56-4f52-a94b-5116668bfc05)
